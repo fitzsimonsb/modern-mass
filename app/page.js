@@ -87,23 +87,19 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* EMAIL CAPTURE
-            Replace the form below with your Beehiiv or Mailchimp embed code.
-            Sign up free at beehiiv.com, create a publication, then paste your
-            embed form here in place of this placeholder. */}
+        {/* EMAIL CAPTURE — Beehiiv */}
         <div className="email-section">
           <h3 className="email-title">Be the first to know</h3>
           <p className="email-desc">Get notified when the app launches.</p>
-          <form className="email-form" action="#" method="post">
-            <input
-              className="email-input"
-              type="email"
-              name="email"
-              placeholder="your@email.com"
-              required
-            />
-            <button className="email-btn" type="submit">Notify me</button>
-          </form>
+          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+          <iframe
+            src="https://subscribe-forms.beehiiv.com/2fdc126e-9e7a-459e-8a6d-da70e660a925"
+            className="beehiiv-embed"
+            data-test-id="beehiiv-embed"
+            frameBorder="0"
+            scrolling="no"
+            style={{width: '560px', height: '315px', margin: '0', borderRadius: '0', backgroundColor: 'transparent', boxShadow: 'none', maxWidth: '100%'}}
+          />
         </div>
       </div>
 
