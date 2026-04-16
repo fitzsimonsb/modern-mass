@@ -331,6 +331,330 @@ footer {
   letter-spacing: 0.04em;
 }
 
+/* ============================================================
+   PRAYER REQUESTS
+   ============================================================ */
+
+/* Section wrapper */
+.pr-section {
+  max-width: 640px;
+  margin: 4rem auto 0;
+  padding: 0 2rem;
+}
+
+.pr-section-inner {
+  margin-bottom: 4rem;
+}
+
+.pr-section-header {
+  margin-bottom: 2rem;
+}
+
+.pr-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0.5rem 0 0.75rem;
+  line-height: 1.3;
+}
+
+.pr-section-desc {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+
+/* Form */
+.pr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pr-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.pr-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.pr-optional {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.pr-input,
+.pr-textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--warm-white);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.pr-input:focus,
+.pr-textarea:focus {
+  border-color: var(--gold);
+}
+
+.pr-textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.pr-char-count {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  text-align: right;
+}
+
+.pr-hint {
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.pr-error {
+  font-size: 0.85rem;
+  color: #8b3a2a;
+  background: #fdf0ee;
+  border: 1px solid #f0c4bb;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+}
+
+.pr-btn {
+  padding: 0.85rem 1.5rem;
+  background: var(--ink);
+  color: var(--cream);
+  border: none;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.15s;
+  align-self: flex-start;
+}
+
+.pr-btn:hover:not(:disabled) { background: var(--ink-light); }
+.pr-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+/* Form success state */
+.pr-success {
+  background: var(--warm-white);
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.pr-success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f0f7ee;
+  color: #4a7c59;
+  border: 1px solid #c8e0c2;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.pr-success-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.pr-success-text {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+
+/* Prayer wall */
+.pw-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pw-card {
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  background: var(--warm-white);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.pw-card--open {
+  border-color: var(--gold-light);
+}
+
+.pw-card-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem;
+}
+
+.pw-card-trigger:hover .pw-card-name {
+  color: var(--ink-light);
+}
+
+.pw-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  transition: color 0.15s;
+}
+
+.pw-card-toggle {
+  font-size: 1.1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.pw-card-body {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--divider);
+}
+
+.pw-card-message {
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin: 1rem 0 0.75rem;
+}
+
+.pw-card-message--empty {
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.pw-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.pw-card-time {
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.04em;
+}
+
+.pw-card-flag {
+  background: none;
+  border: none;
+  font-size: 0.7rem;
+  color: var(--ink-muted);
+  cursor: pointer;
+  padding: 0.25rem 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-family: 'Inter', sans-serif;
+}
+
+.pw-card-flag:hover:not(:disabled) { color: var(--ink-light); }
+.pw-card-flag--sent,
+.pw-card-flag:disabled { cursor: default; text-decoration: none; }
+
+.pw-status {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  text-align: center;
+  padding: 2.5rem 0;
+  font-style: italic;
+}
+
+/* Email verified page */
+.pr-verified {
+  max-width: 480px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.pr-verified-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.pr-verified-icon--success {
+  background: #f0f7ee;
+  color: #4a7c59;
+  border: 1px solid #c8e0c2;
+}
+
+.pr-verified-icon--error {
+  background: #fdf0ee;
+  color: #8b3a2a;
+  border: 1px solid #f0c4bb;
+}
+
+.pr-verified-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.pr-verified-body {
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.pr-verified-link {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 640px) {
   .nav { padding: 1.5rem; }
@@ -340,4 +664,6 @@ footer {
   .prayer-content { padding: 0 1.5rem; }
   .coming-soon { padding: 0 1.5rem 2rem; }
   .email-form { flex-direction: column; }
+  .pr-section { padding: 0 1.5rem; }
+  .pr-btn { width: 100%; align-self: stretch; text-align: center; }
 }
